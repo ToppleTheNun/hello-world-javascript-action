@@ -1,0 +1,33 @@
+{
+  "name": "hello-world-javascript-action",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToppleTheNun/hello-world-javascript-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ToppleTheNun/hello-world-javascript-action/issues"
+  },
+  "homepage": "https://github.com/ToppleTheNun/hello-world-javascript-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0",
+    "@zeit/ncc": "^0.20.5",
+    "husky": "^3.0.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add dist/index.js"
+    }
+  }
+}
